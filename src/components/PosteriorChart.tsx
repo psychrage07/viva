@@ -1,0 +1,12 @@
+'use client';
+import { useEffect, useRef, useState } from 'react';
+import { Activity, Info } from 'lucide-react';
+import { entropy, map, type Dist } from '@/lib/engine';
+import { newtonian as pack } from '@/lib/packs';
+const labels:Record<string,string>={SOUND:'Sound understanding',...Object.fromEntries(pack.misconceptions.map(m=>[m.id,m.label]))};
+function AnimatedNumber({value}:{value:number}){const [display,setDisplay]=useState(value);const previous=useRef(value);useEffect(()=>{const start=performance.now();const from=previous.current;let frame=0;const tick=(now:number)=>{const t=Math.min(1,(now-start)/600);setDisplay(from+(value-from)*(1-(1-t)**3));if(t<1)frame=requestAnimationFrame(tick);else previous.current=value;};frame=requestAnimationFrame(tick);return()=>cancelAnimationFrame(frame);},[value]);return <>{display.toFixed(2)}</>;}
+export default function PosteriorChart({distribution,compact=false,observations=0}:{distribution:Dist;compact?:boolean;observations?:number}){
+  const sorted=Object.entries(distribution).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0]));
+  const top=map(distribution);
+  return <aside className={'posterior-panel '+(compact?'compact':'')} aria-label="Live belief probabilities"><div className="chart-heading"><span><Activity size={16}/> A window into understanding</span><span className="live-dot">LIVE</span></div><div className="entropy-readout"><div><strong><AnimatedNumber value={entropy(distribution)}/></strong><span>bits of uncertainty</span></div><span className="chart-observations">{observations} answer{observations===1?'':'s'} in</span></div><div className="probability-axis"><span>Possible explanations</span><span>Probability</span></div><div className="posterior-bars" style={{height:(compact?5:sorted.length)*43}}>{Object.entries(distribution).map(([id,p])=>{const rank=sorted.findIndex(([h])=>h===id);return <div className={'posterior-row '+(rank===0?'leading':'')} key={id} style={{transform:`translateY(${rank*43}px)`,opacity:compact&&rank>=5?0:1}}><div className="bar-label"><span>{labels[id]}</span><b>{Math.round(p*100)}%</b></div><div className="bar-track"><div style={{width:`${Math.max(.7,p*100)}%`}}/></div></div>;})}</div><div className="chart-footnote"><Info size={14}/><span>{top.p>=.9?'One belief is coming into focus.':'Each answer helps us narrow the possibilities.'} Probabilities are provisional, not a grade.</span></div></aside>;
+}

@@ -1,0 +1,18 @@
+{
+  "id": "explanation-07",
+  "kind": "sound",
+  "omitted": null,
+  "explanation": "Here is how I understand force and motion. An inanimate surface exerts a normal contact force on an object it supports. Gravity acts in a vacuum and continues to pull downward throughout a ball’s flight. Velocity and acceleration can point in opposite directions, and zero velocity does not imply zero acceleration. Static friction opposes relative slipping at a contact, so it can point in the direction of an object’s motion. Net force causes acceleration, not velocity. An object keeps a constant velocity when the net force is zero. After release, a thrown object carries no stored force from the thrower. In a vacuum, objects fall with the same acceleration regardless of mass. Two interacting objects exert equal and opposite forces on each other, regardless of their masses. Circular motion requires a net force toward the center, not an outward force.",
+  "gold": {
+    "acceleration": "covered",
+    "inertia": "covered",
+    "interaction": "covered",
+    "fall": "covered",
+    "pairs": "covered",
+    "circular": "covered",
+    "normal": "covered",
+    "gravity": "covered",
+    "direction": "covered",
+    "friction": "covered"
+  }
+}

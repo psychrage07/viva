@@ -1,0 +1,16 @@
+import { describe, expect, it } from 'vitest';
+import { config, entropy, examAnswers, informationGain, map, priorFromCoverage, seededRng, selectNextProbe, simulate, uniformPrior, updatePosterior } from '../src/lib/engine';
+import type { Coverage, Probe } from '../src/lib/engine';
+import { newtonian as pack, validatePack } from '../src/lib/packs';
+const tiny: Probe = { id: 'tiny', stem: '', choices: [{id:'A',text:''},{id:'B',text:''}], correct:'A',predicted:{one:'A',two:'B'},targets:[] };
+describe('pure diagnostic engine', () => {
+  it('pack passes every structural check', () => expect(validatePack(pack)).toEqual([]));
+  it('normalizes after every update to 1e-9', () => { let d = uniformPrior(pack); for (const p of pack.probes) { d = updatePosterior(d,p,p.choices[1].id,config); expect(Math.abs(Object.values(d).reduce((a,b)=>a+b,0)-1)).toBeLessThan(1e-9); } });
+  it('identifies a unique prediction at zero slip', () => expect(updatePosterior({one:.5,two:.5},tiny,'B',{...config,slip:0})).toEqual({one:0,two:1}));
+  it('EIG is nonnegative under varied posteriors and zero for constant predictions', () => { let d=uniformPrior(pack); for (const p of pack.probes) { for (const q of pack.probes) expect(informationGain(d,q,config)).toBeGreaterThanOrEqual(0); d=updatePosterior(d,p,p.correct,config); } expect(informationGain({one:.5,two:.5},{...tiny,predicted:{one:'A',two:'A'}},config)).toBe(0); });
+  it('does not ask an already asked probe and breaks ties by ID', () => { const d=uniformPrior(pack); const first=selectNextProbe(pack.probes,d,[],config)!; expect(selectNextProbe(pack.probes,d,[first.id],config)?.id).not.toBe(first.id); expect(selectNextProbe(pack.probes,d,pack.probes.map(p=>p.id),config)).toBeUndefined(); expect(selectNextProbe([{...tiny,id:'z'}, {...tiny,id:'a'}],{one:.5,two:.5},[],config)?.id).toBe('a'); });
+  it('all covered favors SOUND; missing concepts favor attached beliefs', () => { const covered=Object.fromEntries(pack.concepts.map(c=>[c.id,'covered' as Coverage])); expect(map(priorFromCoverage(pack,covered,config)).id).toBe('SOUND'); for(const c of pack.concepts){ const d=priorFromCoverage(pack,{...covered,[c.id]:'missing'},config); const attached=pack.misconceptions.filter(m=>m.attachedTo.includes(c.id)); const others=pack.misconceptions.filter(m=>!m.attachedTo.includes(c.id)); for(const m of attached) for(const other of others) expect(d[m.id]).toBeGreaterThan(d[other.id]); } });
+  it('maintains a true one-percent floor for every coverage input', () => { for(const status of ['covered','partial','missing','unknown'] as Coverage[]) { const d=priorFromCoverage(pack,Object.fromEntries(pack.concepts.map(c=>[c.id,status])),config); for(const p of Object.values(d)) expect(p).toBeGreaterThanOrEqual(.01); } });
+  it('recovers over 80% of 500 synthetic students at .12 slip', () => { const rng=seededRng(74021); const ids=Object.keys(uniformPrior(pack)); let correct=0; for(let i=0;i<500;i++) correct+=Number(simulate(pack,ids[Math.floor(rng()*ids.length)],selectNextProbe,config,rng).correct); console.log('500-student recovery:',correct/500); expect(correct/500).toBeGreaterThan(.80); });
+  it('has finite entropy and deterministic exam commitments', () => { expect(entropy({one:1,two:0})).toBe(0); expect(examAnswers('SOUND',pack.probes).every(a=>a.correct)).toBe(true); });
+});

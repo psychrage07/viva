@@ -1,0 +1,54 @@
+{
+  "de66b0ee9268a68fa372611c799c245d6842543a27f579413f33dfd65f53bf9e": {
+    "recorded": false,
+    "data": {
+      "coverage": {
+        "acceleration": "missing",
+        "inertia": "unknown",
+        "interaction": "missing",
+        "fall": "unknown",
+        "pairs": "unknown",
+        "circular": "unknown",
+        "normal": "unknown",
+        "gravity": "partial",
+        "direction": "partial",
+        "friction": "unknown"
+      }
+    }
+  },
+  "46de4593f82da4d934a27287265f231c5f8dfc125821fae0ad0a7aeab2242562": {
+    "recorded": false,
+    "data": {
+      "answers": [
+        {
+          "probeId": "p02",
+          "choice": "C",
+          "reasoning": "I think the upward force of a throw gets used up until the object turns around. My answer is: The stored push gradually runs out and it slows."
+        },
+        {
+          "probeId": "p07",
+          "choice": "B",
+          "reasoning": "I think the upward force of a throw gets used up until the object turns around. My answer is: Both velocity and acceleration are zero."
+        },
+        {
+          "probeId": "p08",
+          "choice": "C",
+          "reasoning": "I think the upward force of a throw gets used up until the object turns around. My answer is: Zero because the force from starting has been used up."
+        },
+        {
+          "probeId": "p11",
+          "choice": "D",
+          "reasoning": "I think the upward force of a throw gets used up until the object turns around. My answer is: Both backward as the original pushes run out."
+        }
+      ]
+    }
+  },
+  "85e11d30abb5e82f604f3e17fa2bb9f224f72ec220d24dba1993cb5b49e4eea2": {
+    "recorded": false,
+    "data": {
+      "diagnosis": "Your answers are most consistent with “the push runs out”. This is a working hypothesis, not a label for you. Your student inherited this belief; making the missing idea explicit gives it a better starting point.",
+      "sentence": "After release, a thrown object carries no stored force from the thrower.",
+      "conceptId": "interaction"
+    }
+  }
+}

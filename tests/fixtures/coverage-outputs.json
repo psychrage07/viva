@@ -1,0 +1,1206 @@
+{
+  "provenance": "deterministic-fallback; NOT Gemini responses; API key unavailable",
+  "model": null,
+  "runs": [
+    {
+      "id": "explanation-01",
+      "run": 0,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-01",
+      "run": 1,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-01",
+      "run": 2,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-02",
+      "run": 0,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-02",
+      "run": 1,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-02",
+      "run": 2,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-03",
+      "run": 0,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-03",
+      "run": 1,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-03",
+      "run": 2,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-04",
+      "run": 0,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-04",
+      "run": 1,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-04",
+      "run": 2,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-05",
+      "run": 0,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-05",
+      "run": 1,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-05",
+      "run": 2,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-06",
+      "run": 0,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-06",
+      "run": 1,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-06",
+      "run": 2,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-07",
+      "run": 0,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-07",
+      "run": 1,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-07",
+      "run": 2,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-08",
+      "run": 0,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-08",
+      "run": 1,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-08",
+      "run": 2,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-09",
+      "run": 0,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-09",
+      "run": 1,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-09",
+      "run": 2,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-10",
+      "run": 0,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-10",
+      "run": 1,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-10",
+      "run": 2,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-11",
+      "run": 0,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-11",
+      "run": 1,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-11",
+      "run": 2,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-12",
+      "run": 0,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-12",
+      "run": 1,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-12",
+      "run": 2,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-13",
+      "run": 0,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-13",
+      "run": 1,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-13",
+      "run": 2,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-14",
+      "run": 0,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-14",
+      "run": 1,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-14",
+      "run": 2,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-15",
+      "run": 0,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-15",
+      "run": 1,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-15",
+      "run": 2,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-16",
+      "run": 0,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-16",
+      "run": 1,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-16",
+      "run": 2,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-17",
+      "run": 0,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-17",
+      "run": 1,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-17",
+      "run": 2,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-18",
+      "run": 0,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-18",
+      "run": 1,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-18",
+      "run": 2,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-19",
+      "run": 0,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-19",
+      "run": 1,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-19",
+      "run": 2,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-20",
+      "run": 0,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-20",
+      "run": 1,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    },
+    {
+      "id": "explanation-20",
+      "run": 2,
+      "source": "fallback",
+      "degraded": true,
+      "data": {
+        "coverage": {
+          "acceleration": "unknown",
+          "inertia": "unknown",
+          "interaction": "unknown",
+          "fall": "unknown",
+          "pairs": "unknown",
+          "circular": "unknown",
+          "normal": "unknown",
+          "gravity": "unknown",
+          "direction": "unknown",
+          "friction": "unknown"
+        }
+      }
+    }
+  ]
+}

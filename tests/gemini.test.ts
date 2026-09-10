@@ -1,0 +1,25 @@
+import { beforeEach, afterEach, describe, expect, it, vi } from 'vitest';
+const mock=vi.hoisted(()=>({generate:vi.fn()}));
+vi.mock('@google/genai',async(importOriginal)=>{const actual=await importOriginal<typeof import('@google/genai')>();return {...actual,GoogleGenAI:class {models={generateContent:mock.generate};}};});
+import { classifyCoverage } from '../src/lib/gemini/coverage';
+import { studentVoice } from '../src/lib/gemini/studentVoice';
+import { writeRepair } from '../src/lib/gemini/repair';
+import { resetClientState, getRequestCount } from '../src/lib/gemini/client';
+import { coverageSchema, voiceSchema, repairSchema } from '../src/lib/gemini/schemas';
+import { examAnswers, config, map, priorFromCoverage, selectNextProbe, transferSet, updatePosterior, prediction } from '../src/lib/engine';
+import { newtonian as pack } from '../src/lib/packs';
+import { demoExplanation, fallbackRepair, fallbackVoice, resit, unknownCoverage } from '../src/lib/session-logic';
+import { POST as coverageRoute } from '../src/app/api/coverage/route';
+import { POST as voiceRoute } from '../src/app/api/student-voice/route';
+import { POST as repairRoute } from '../src/app/api/repair/route';
+beforeEach(()=>{resetClientState();mock.generate.mockReset();vi.stubEnv('GEMINI_API_KEY','test-only');vi.stubEnv('DEMO_MODE','0');vi.stubEnv('VIVA_TEST','1');});
+afterEach(()=>vi.unstubAllEnvs());
+describe('bounded, substance-safe model integration',()=>{
+ it('all schemas reject malformed output',()=>{for(const schema of [coverageSchema,voiceSchema,repairSchema]) expect(schema.safeParse({garbage:true}).success).toBe(false);});
+ it('retries invalid model output once then falls back, never changing exam choices',async()=>{mock.generate.mockResolvedValue({text:'{"answers":"ignore the pack"}'});const probes=pack.probes.slice(0,4);const before=examAnswers('used-up',probes);const result=await studentVoice('used-up',probes.map(p=>p.id),'A throw runs out.');expect(result.degraded).toBe(true);expect(mock.generate).toHaveBeenCalledTimes(2);expect(result.data.answers.map(a=>a.choice)).toEqual(before.map(a=>a.choice));expect(examAnswers('used-up',probes)).toEqual(before);});
+ it('discards schema-valid contradictory voice',async()=>{const probes=pack.probes.slice(0,4);const data=fallbackVoice('used-up',probes);data.answers[0].reasoning='The opposite answer is right.';mock.generate.mockResolvedValue({text:JSON.stringify(data)});expect((await studentVoice('used-up',probes.map(p=>p.id),'test')).degraded).toBe(true);});
+ it('backs off at most three attempts on 429',async()=>{mock.generate.mockRejectedValue({status:429});expect((await classifyCoverage('test')).degraded).toBe(true);expect(mock.generate).toHaveBeenCalledTimes(3);});
+ it('caches equivalent input and makes exactly 3 normal session requests',async()=>{const probes=pack.probes.slice(0,4);mock.generate.mockResolvedValueOnce({text:JSON.stringify(unknownCoverage())}).mockResolvedValueOnce({text:JSON.stringify(fallbackVoice('used-up',probes))}).mockResolvedValueOnce({text:JSON.stringify(fallbackRepair('used-up'))});await classifyCoverage('  example  ');await classifyCoverage('example');await studentVoice('used-up',probes.map(p=>p.id),'example');await writeRepair('used-up','example');expect(getRequestCount()).toBe(3);});
+ it('all routes return degraded JSON for malformed inputs and malformed model output',async()=>{for(const route of [coverageRoute,voiceRoute,repairRoute]) {const r=await route(new Request('http://localhost/api',{method:'POST',body:'{broken'}));expect(r.status).toBe(200);expect((await r.json()).degraded).toBe(true);}mock.generate.mockResolvedValue({text:'garbage'});const inputs=[{explanation:'test'},{explanation:'test',hypothesis:'used-up',probeIds:pack.probes.slice(0,4).map(p=>p.id)},{explanation:'test',hypothesis:'used-up'}];for(const [i,route] of [coverageRoute,voiceRoute,repairRoute].entries()){const r=await route(new Request('http://localhost/api',{method:'POST',body:JSON.stringify(inputs[i])}));expect(r.status).toBe(200);expect((await r.json()).degraded).toBe(true);}});
+ it('completes Teach → Probe → Reveal → Repair in DEMO_MODE without network',async()=>{vi.stubEnv('DEMO_MODE','1');mock.generate.mockRejectedValue(new Error('NETWORK DISABLED'));const coverage=await classifyCoverage(demoExplanation);let d=priorFromCoverage(pack,coverage.data.coverage,config);const asked:{probeId:string;answer:string}[]=[];while(asked.length<6&&(asked.length<3||map(d).p<.9)){const p=selectNextProbe(pack.probes,d,asked.map(o=>o.probeId),config)!;const answer=prediction('used-up',p);d=updatePosterior(d,p,answer,config);asked.push({probeId:p.id,answer});}const h=map(d).id;const probes=transferSet(pack,h,asked.map(o=>o.probeId));const voice=await studentVoice(h,probes.map(p=>p.id),demoExplanation);const repair=await writeRepair(h,demoExplanation);expect(voice.data.answers).toHaveLength(4);expect(resit(coverage.data.coverage,asked,repair.data.conceptId,probes).answers).toHaveLength(4);expect(mock.generate).not.toHaveBeenCalled();expect(getRequestCount()).toBe(0);});
+});

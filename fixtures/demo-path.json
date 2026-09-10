@@ -1,0 +1,25 @@
+{
+  "explanation": "When you throw a ball up, the push from your hand goes into the ball. The ball uses up that upward push as it rises, so it slows down. When the push runs out at the top, gravity takes over and brings it back down.",
+  "hypothesis": "used-up",
+  "asked": [
+    {
+      "probeId": "p01",
+      "answer": "B"
+    },
+    {
+      "probeId": "p27",
+      "answer": "C"
+    },
+    {
+      "probeId": "p12",
+      "answer": "C"
+    }
+  ],
+  "probeIds": [
+    "p02",
+    "p07",
+    "p08",
+    "p11"
+  ],
+  "provenance": "Authored offline script; not recorded from Gemini"
+}

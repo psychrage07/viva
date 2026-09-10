@@ -1,0 +1,14 @@
+import { z } from 'zod';
+import { Type, type Schema } from '@google/genai';
+import { newtonian as pack } from '../packs';
+const coverageShape = Object.fromEntries(pack.concepts.map(c => [c.id, z.enum(['covered', 'partial', 'missing', 'unknown'])]));
+export const coverageSchema = z.object({ coverage: z.object(coverageShape).strict() }).strict();
+export const voiceSchema = z.object({ answers: z.array(z.object({ probeId: z.string(), choice: z.enum(['A','B','C','D']), reasoning: z.string().min(1).max(1000) }).strict()).length(4) }).strict();
+export const repairSchema = z.object({ diagnosis: z.string().min(1).max(1200), sentence: z.string().min(1).max(500), conceptId: z.string() }).strict();
+export const coverageJson: Schema = { type: Type.OBJECT, required: ['coverage'], properties: { coverage: { type: Type.OBJECT, required: pack.concepts.map(c=>c.id), properties: Object.fromEntries(pack.concepts.map(c=>[c.id,{type:Type.STRING,enum:['covered','partial','missing','unknown']}])) } } };
+export const voiceJson: Schema = { type:Type.OBJECT, required:['answers'], properties:{ answers:{ type:Type.ARRAY,minItems:'4',maxItems:'4',items:{type:Type.OBJECT,required:['probeId','choice','reasoning'],properties:{probeId:{type:Type.STRING},choice:{type:Type.STRING,enum:['A','B','C','D']},reasoning:{type:Type.STRING}}} } } };
+export const repairJson: Schema = { type:Type.OBJECT,required:['diagnosis','sentence','conceptId'],properties:{diagnosis:{type:Type.STRING},sentence:{type:Type.STRING},conceptId:{type:Type.STRING,enum:pack.concepts.map(c=>c.id)}} };
+const hypothesis = z.enum(['SOUND', ...pack.misconceptions.map(m => m.id)] as [string,...string[]]);
+export const explanationInput = z.object({ packId:z.literal('newtonian').default('newtonian'), explanation:z.string().min(1).max(10000) });
+export const voiceInput = explanationInput.extend({ hypothesis, probeIds:z.array(z.string().refine(id=>pack.probes.some(p=>p.id===id))).length(4).refine(ids=>new Set(ids).size===4) });
+export const repairInput = explanationInput.extend({ hypothesis });
