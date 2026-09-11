@@ -1,4 +1,4 @@
-import { config, examAnswers, map, priorFromCoverage, updatePosterior, type Coverage, type Dist, type ExamAnswer, type Observation, type Probe } from './engine';
+import { config, examAnswers, map, priorFromCoverage, updatePosterior, type Concept, type Coverage, type Dist, type ExamAnswer, type Observation, type Probe } from './engine';
 import { newtonian as pack } from './packs';
 export const demoExplanation = 'When you throw a ball up, the push from your hand goes into the ball. The ball uses up that upward push as it rises, so it slows down. When the push runs out at the top, gravity takes over and brings it back down.';
 export type CoverageResult = { coverage: Record<string, Coverage> };
@@ -34,3 +34,11 @@ export function resit(coverage: Record<string, Coverage>, observations: Observat
   return { posterior, answers: examAnswers(map(posterior).id, probes) };
 }
 export function normalizedSentence(text: string) { return text.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(); }
+// For a contention candidate in an "insufficient evidence" verdict: which concept, if the
+// explanation had established it, would have separated this candidate from the rest?
+// SOUND has no single attached concept (it means "everything covered"), so it returns null.
+export function distinguishingConcept(h: string): Concept | null {
+  const m = pack.misconceptions.find(m => m.id === h);
+  if (!m) return null;
+  return pack.concepts.find(c => c.id === m.attachedTo[0]) ?? null;
+}

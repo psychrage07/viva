@@ -27,7 +27,7 @@ const misconceptionRows = [
   ['direction', 'Motion and acceleration align', 'I think acceleration always points along velocity and vanishes when velocity is zero', 'direction', 'Trowbridge & McDermott (1981)'],
   ['rolling-friction', 'Friction always points back', 'I think friction must point backward whenever an object is moving forward', 'friction', 'Besson, Borghi, De Ambrosis & Mascheretti (2007), How to teach friction'],
 ] as const;
-export const misconceptions: Misconception[] = misconceptionRows.map(([id, label, belief, conceptId, citation]) => ({ id, label, belief, attachedTo: [conceptId], repair: concepts.find(c => c.id === conceptId)!.statement, citation }));
+export const misconceptions: Misconception[] = misconceptionRows.map(([id, label, belief, conceptId, citation]) => ({ id, label, belief, attachedTo: [conceptId], repair: concepts.find(c => c.id === conceptId)!.statement, citation, searchTerms: [label.toLowerCase(), id, conceptId] }));
 function q(id: string, stem: string, choices: string[], wrong: Record<string, string>, targets: string[]): Probe {
   return { id, stem, choices: choices.map((text, i) => ({ id: String.fromCharCode(65 + i), text })), correct: 'A', predicted: Object.fromEntries(misconceptions.map(m => [m.id, wrong[m.id] ?? '*'])), targets };
 }
