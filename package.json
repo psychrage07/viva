@@ -27,6 +27,8 @@
     "zod": "^4.6.2"
   },
   "devDependencies": {
+    "@react-three/test-renderer": "^9.1.1",
+    "@shaderfrog/glsl-parser": "^7.0.1",
     "@tailwindcss/postcss": "4.1.17",
     "@types/node": "22.19.15",
     "@types/pg": "8.18.0",
